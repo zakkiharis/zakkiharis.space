@@ -8,9 +8,7 @@ export default function Blog({ posts }) {
     return (
         <div>
             <Layout>
-                <div>
-                    <Posts posts={posts} />
-                </div>
+                <Posts posts={posts} />
             </Layout>
         </div>
     )
