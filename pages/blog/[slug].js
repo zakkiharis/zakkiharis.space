@@ -28,7 +28,7 @@ export default function postBlog({
                         </div>
                     </div>
                     <div className="filter brightness-75">
-                        <Image height="h-imgBlog" width="w-full" className="object-cover" src={cover_image} alt="" />
+                        <Image height="480" width="1350" className="object-cover" src={cover_image} alt="" />
                     </div>
                 </div>
                 <div className="flex flex-row w-full mx-auto mt-10">
