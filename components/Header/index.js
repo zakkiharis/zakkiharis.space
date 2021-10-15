@@ -17,13 +17,13 @@ export default function Header() {
                     </div>
                     <div className="flex-grow flex items-center justify-end">
                         <Link href="#about" scroll={true}>
-                            <a className="text-white mx-5">About</a>
+                            <a className="text-white hover:text-greenLantern mx-5">About</a>
                         </Link>
                         <Link href="#projects">
-                            <a className="text-white mx-5">Projects</a>
+                            <a className="text-white hover:text-greenLantern mx-5">Projects</a>
                         </Link>
                         <Link href="/blog" scroll={true}>
-                            <a className="text-white mx-5">Blog</a>
+                            <a className="text-white hover:text-greenLanternmx-5">Blog</a>
                         </Link>
                         <Link href="/resume" passHref>
                             <div className="hidden sm:block p-2 rounded-md border border-greenLantern text-greenLantern hover:text-white hover:bg-greenLantern ml-5 cursor-pointer">
