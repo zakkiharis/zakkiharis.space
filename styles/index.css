@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.article {
+  font-family: "Poppins", sans-serif;
+}
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6 {
+  @apply text-greenLantern sticky top-24 bg-blackGray30 p-3 rounded-md;
+}
+
+.cardpost p {
+  font-family: "Poppins", sans-serif;
+  @apply text-base;
+}
+
+/* 
+Tooltip 
+----------------------------------------------------------------------------- */
+.tooltip {
+  @apply relative hidden md:inline-block;
+}
+
+.tooltip .tooltiptext {
+  @apply invisible w-28 bg-greenLantern text-blackGray30 text-center rounded-md py-1 absolute z-10 top-full left-1/2 mt-3 -ml-16;
+}
+
+.tooltip:hover .tooltiptext {
+  @apply visible;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Typing Effect
+----------------------------------------------------------------------------- */
+/* .typing {
+  width: 12ch;
+  animation: typing 3s steps(12), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+} */

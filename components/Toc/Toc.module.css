@@ -1,0 +1,40 @@
+.tocDiv {
+  padding: 0.7em 1.5em;
+  border-radius: 0.5em;
+  box-shadow: 0 0 1em 3px var(--color-shadow);
+  height: max-content;
+  max-height: 80vh;
+  z-index: 3;
+  line-height: 2.2em;
+  right: 1em;
+  max-width: 20em;
+  overscroll-behavior: none;
+  grid-row: span 10;
+  position: sticky;
+  top: 85px;
+  padding-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  @apply border-2 border-greenLantern border-solid;
+}
+
+.tocDiv nav {
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+.tocTitle {
+  color: royalblue;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.tocLink {
+  cursor: pointer;
+}
+
+.tocLink a:active {
+  color: red;
+}
+/* .tocLink a:hover {
+  color: blueviolet;
+} */

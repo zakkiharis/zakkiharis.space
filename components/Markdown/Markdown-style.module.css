@@ -1,0 +1,18 @@
+.Markdown {
+  @apply text-kuning;
+}
+
+/* List 
+----------------------------------------------------------------------------- */
+.Markdown ul,
+.Markdown ol {
+  @apply pl-10;
+}
+
+.Markdown ul {
+  @apply list-disc;
+}
+
+.Markdown ol {
+  @apply list-decimal;
+}
