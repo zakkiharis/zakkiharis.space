@@ -8,7 +8,7 @@ export default function Blog({ posts }) {
     return (
         <div>
             <Layout>
-                <div className="mt-16">
+                <div>
                     <Posts posts={posts} />
                 </div>
             </Layout>
