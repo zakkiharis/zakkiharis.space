@@ -1,3 +1,4 @@
 module.exports = {
-  reactStrictMode: true,
+  path: '/_next/image',
+  loader: 'default'
 }
