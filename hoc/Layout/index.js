@@ -9,7 +9,7 @@ export default function Layout({ children }) {
                     <div className="fixed w-full top-0 z-30">
                         <Header />
                     </div>
-                    <div className="mt-16">
+                    <div>
                         {children}
                     </div>
                     <div className="w-full bottom-0 z-30 ">
