@@ -7,6 +7,7 @@ module.exports = {
     './components/**/*.js',
     './pomponents/Markdown/Markdown-style.module.css',
     './container/**/*.js',
+    './hoc/**/*.js',
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
