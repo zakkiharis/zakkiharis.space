@@ -4,6 +4,7 @@ import fs from 'fs'
 import Layout from '../../hoc/Layout'
 import Markdown from '../../components/Markdown'
 import Toc from '../../components/Toc'
+import Image from 'next/image'
 
 export default function postBlog({
     frontmatter: { title, date, cover_image, tags },
@@ -12,7 +13,7 @@ export default function postBlog({
     let tag = tags ? tags.toString() : null
     let tagPost = tag ? <div className="sm:text-left sm:pr-3"><span className="bg-black bg-opacity-75 rounded-md p-2"> Tags : {tag}</span> </div> : <div></div>
     return (
-        <>
+        <div className="mt-16">
             <Layout>
                 <div className="relative text-white sm:text-left">
                     <div className="absolute z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5">
@@ -27,7 +28,7 @@ export default function postBlog({
                         </div>
                     </div>
                     <div className="filter brightness-75">
-                        <img className="w-full h-imgBlog object-cover" src={cover_image} alt="" />
+                        <Image height="h-imgBlog" width="w-full" className="object-cover" src={cover_image} alt="" />
                     </div>
                 </div>
                 <div className="flex flex-row w-full mx-auto mt-10">
@@ -41,7 +42,7 @@ export default function postBlog({
                     </div>
                 </div>
             </Layout>
-        </>
+        </div>
     )
 
 }

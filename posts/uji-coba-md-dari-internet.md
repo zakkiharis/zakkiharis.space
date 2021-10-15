@@ -1,4 +1,5 @@
 ---
+part: "7"
 title: "Uji Coba Md dari Internet"
 date: "March 7, 2021"
 excerpt: "In this article we will look at some of the new features offered in version 8 of PHP"

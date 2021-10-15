@@ -14,7 +14,7 @@ const accumulateOffsetTop = (el, totalOffset = 0) => {
 
 
 export default function Toc({ headingSelector, getTitle, getDepth, ...rest }) {
-    const { throttleTime = 200, tocTitle = `Contens` } = rest
+    const { throttleTime = 200 } = rest
 
     const [headings, setHeadings] = useState({
         titles: [],
@@ -43,7 +43,6 @@ export default function Toc({ headingSelector, getTitle, getDepth, ...rest }) {
     useEffect(() => {
         const scrollHandler = throttle(() => {
             const { titles, nodes } = headings
-
             const offsets = nodes.map(el => accumulateOffsetTop(el))
             const activeIndex = offsets.findIndex(
                 offset => offset > window.scrollY + 0.8 * window.innerHeight
@@ -63,23 +62,22 @@ export default function Toc({ headingSelector, getTitle, getDepth, ...rest }) {
                 <nav>
                     {headings.titles.map(({ title, depth }, index) =>
                     (
-                        <div className={classes.tocLink}>
-                            <a
-                                key={title}
-                                active={active !== index}
-                                depth={depth - headings.minDepth}
-                                onClick={event => {
-                                    event.preventDefault()
-                                    // setOpen(false)
-                                    headings.nodes[index].scrollIntoView({
-                                        behavior: `smooth`,
-                                        block: `center`
-                                    })
-                                }}
-                            >
-                                {title}
-                            </a>
-                        </div>
+                        <a
+                            className={classes.tocLink}
+                            key={title}
+                            active={active !== index}
+                            depth={depth - headings.minDepth}
+                            onClick={event => {
+                                event.preventDefault()
+                                // setOpen(false)
+                                headings.nodes[index].scrollIntoView({
+                                    behavior: `smooth`,
+                                    block: `center`
+                                })
+                            }}
+                        >
+                            {title}
+                        </a>
                     ))}
                 </nav>
             </div>

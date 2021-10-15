@@ -6,13 +6,13 @@ import Posts from "../../components/Posts"
 
 export default function Blog({ posts }) {
     return (
-        <>
+        <div className="mt-16">
             <Layout>
                 <div>
                     <Posts posts={posts} />
                 </div>
             </Layout>
-        </>
+        </div>
     )
 }
 

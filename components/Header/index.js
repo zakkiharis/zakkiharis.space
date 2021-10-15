@@ -22,10 +22,10 @@ export default function Header() {
                         <Link href="#projects">
                             <a className="text-white mx-5">Projects</a>
                         </Link>
-                        <Link href="#blog" scroll={true}>
+                        <Link href="/blog" scroll={true}>
                             <a className="text-white mx-5">Blog</a>
                         </Link>
-                        <Link href="/resume">
+                        <Link href="/resume" passHref>
                             <div className="hidden sm:block p-2 rounded-md border border-greenLantern text-greenLantern hover:text-white hover:bg-greenLantern ml-5 cursor-pointer">
                                 <a>Resume</a>
                             </div>
