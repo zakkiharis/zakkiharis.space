@@ -2,7 +2,12 @@ const colors = require('tailwindcss/colors')
 const { letterSpacing } = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: [
+    './pages/**/*.js',
+    './components/**/*.js',
+    './pomponents/Markdown/Markdown-style.module.css',
+    './container/**/*.js',
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
