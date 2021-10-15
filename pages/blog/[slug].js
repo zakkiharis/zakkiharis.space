@@ -13,7 +13,7 @@ export default function postBlog({
     let tag = tags ? tags.toString() : null
     let tagPost = tag ? <div className="sm:text-left sm:pr-3"><span className="bg-black bg-opacity-75 rounded-md p-2"> Tags : {tag}</span> </div> : <div></div>
     return (
-        <div className="mt-16">
+        <div className="pt-16">
             <Layout>
                 <div className="relative text-white sm:text-left">
                     <div className="absolute z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5">

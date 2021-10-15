@@ -7,7 +7,7 @@ export default function Posts({ posts }) {
     // }, [currentPage]);
 
     return (
-        <div>
+        <div className="pt-16">
             {posts ? (
                 <>
                     <Pagination
