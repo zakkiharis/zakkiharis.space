@@ -7,7 +7,7 @@ export default function HomePage() {
     return (
 
         <Layout>
-            <div className="relative h-full pt-8">
+            <div className="relative h-full bg-blackGray20 pt-8">
                 <div className="flex lg:flex-row text-white sm:min-h-screen flex-col">
                     <div className="flex-1 md:m-auto mb-5">
                         <div className="lg:text-texttron md:text-lgtexttron sm:text-mdtexttron text-smtexttron lg:pl-32 pl-16 md:pb-5 pr-12 font-rubik lg:border-b-2 mt-5 mb-3">
