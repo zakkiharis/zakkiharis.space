@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { addRound } from "../../../utils"
+import { addRound } from '../../../lib/utils'
 import Post from "../Post/Post"
 
 export default function Pagination({ data, pageLimit, dataLimit }) {
@@ -39,7 +39,7 @@ export default function Pagination({ data, pageLimit, dataLimit }) {
 
     return (
         <div>
-            <div className="bg-blackGray20 grid grid-cols-3 gap-4">
+            <div className="bg-blackGray20 grid sm:grid-cols-3 gap-4">
                 {getPaginatedData().map((d, index) => (
                     <Post key={index} data={d} />
                 ))}

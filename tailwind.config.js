@@ -1,11 +1,10 @@
 const colors = require('tailwindcss/colors')
-const { letterSpacing } = require('tailwindcss/defaultTheme')
 
 module.exports = {
   purge: [
     './pages/**/*.js',
     './components/**/*.js',
-    './pomponents/Markdown/Markdown-style.module.css',
+    './components/Markdown/Markdown-style.module.css',
     './container/**/*.js',
     './hoc/**/*.js',
   ],
@@ -29,6 +28,7 @@ module.exports = {
     },
     height: {
       imgBlog: '30rem',
+      homeBlog: '31.9rem',
       jumbotron: '37.5rem'
     },
     boxShadow: {

@@ -1,14 +1,14 @@
 import Link from 'next/link'
-import Container from '../ContainerBox'
 import Image from 'next/image'
 import Layout from '../../hoc/Layout'
+import CardBlog from '../../components/Card/CardBlog'
+import CardProject from '../../components/Card/CardProject'
 
-export default function HomePage() {
+export default function HomePage({ data }) {
     return (
-
         <Layout>
-            <div className="relative h-full bg-blackGray20 pt-8">
-                <div className="flex lg:flex-row text-white sm:min-h-screen flex-col">
+            <div className="relative h-full bg-blackGray20 text-white pt-16 sm:pt-8">
+                <div className="flex lg:flex-row sm:min-h-screen flex-col">
                     <div className="flex-1 md:m-auto mb-5">
                         <div className="lg:text-texttron md:text-lgtexttron sm:text-mdtexttron text-smtexttron lg:pl-32 pl-16 md:pb-5 pr-12 font-rubik lg:border-b-2 mt-5 mb-3">
                             <div>I'm Zakki, a <span className="text-greenLantern">web developer</span>.</div>
@@ -22,12 +22,12 @@ export default function HomePage() {
                     </div>
                 </div>
                 <section id="about" />
-                <div className="container text-white flex flex-col font-rubik">
+                <div className="container mx-auto flex flex-col font-rubik">
                     <div className="mx-auto mt-20 py-5 text-4xl">
                         Abuot me
                     </div>
-                    <div className="flex">
-                        <div className=" flex-1 px-8 py-4 border-r border-greenLantern">
+                    <div className="flex flex-col sm:flex-row">
+                        <div className="flex-1 px-8 py-4 border-r-2 border-greenLantern">
                             I started real coding in October 2021, and I am a self-taught developer. I have a passion for modern looking websites with a few animations. I love what I am doing, and I am highly motivated to collaborate with someone. If you are up into some projects, just let me know!
                         </div>
                         <div className="flex-1 px-8 py-4">
@@ -70,11 +70,42 @@ export default function HomePage() {
                     </div>
                 </div>
                 <section id="projects" />
-                <div className="text-white h-jumbotron bg-red">
-                    <div>
-                        <div>
+                <div className="container mx-auto flex flex-col font-rubik">
+                    <div className="mt-20 mx-auto text-center">
+                        <div className="text-4xl border-b-2 border-greenLantern pb-2 mb-2">
                             My Projects
                         </div>
+                        <div>Check out my portfolio!</div>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 mt-5 mx-4">
+                        <CardProject />
+                        <CardProject />
+                        <CardProject />
+                        <CardProject />
+                        <CardProject />
+                        <CardProject />
+                        <CardProject />
+                    </div>
+                </div>
+                <section id="blog" />
+                <div className="container px-8 sm:mx-auto flex flex-col font-rubik">
+                    <div className="mt-20">
+                        <div className="text-4xl border-b-2 border-greenLantern pb-2 mb-2">
+                            Blog
+                        </div>
+                        <div>Check out my blog!</div>
+                    </div>
+                    <div className="mt-7 flex sm:flex-row flex-col">
+                        {data.map((d, index) => (
+                            <CardBlog key={index} data={d} />
+                        ))}
+                    </div>
+                    <div className="text-center">
+                        <Link href="/blog">
+                            <button className="py-2 px-3 rounded-md mt-7 mb-5 border items-center border-greenOld text-greenLantern hover:bg-greenOld hover:text-white">
+                                See More
+                            </button>
+                        </Link>
                     </div>
                 </div>
                 <Link href="/" scroll={true}>
@@ -86,3 +117,8 @@ export default function HomePage() {
         </Layout>
     )
 }
+
+
+
+
+
