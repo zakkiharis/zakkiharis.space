@@ -29,7 +29,7 @@
 }
 
 .tocLink {
-  cursor: pointer;
+  @apply cursor-pointer text-sm;
 }
 
 .tocLink a:active {
