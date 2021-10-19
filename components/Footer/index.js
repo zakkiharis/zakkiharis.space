@@ -9,16 +9,16 @@ export default function Footer() {
                 Feel free to reach out for collaborations or just a friendly
             </div>
             <div className="flex pt-3 justify-between w-60 m-auto">
-                <a href="https://web.facebook.com/zacky.haris.1">
+                <a target="_blank" href="https://web.facebook.com/zacky.haris.1">
                     <Image width="30" height="30" src="/images/logo/facebook.svg" alt="Switch" />
                 </a>
-                <a href="https://www.instagram.com/zakki_haris/">
+                <a target="_blank" href="https://www.instagram.com/zakki_haris/">
                     <Image width="30" height="30" src="/images/logo/instagram.svg" alt="Switch" />
                 </a>
-                <a href="https://github.com/zakkiharis">
+                <a target="_blank" href="https://github.com/zakkiharis">
                     <Image width="30" height="30" src="/images/logo/github.svg" alt="Switch" />
                 </a>
-                <a href="https://www.linkedin.com/in/zakki-abdurrahman-haris-785983118/">
+                <a target="_blank" href="https://www.linkedin.com/in/zakki-abdurrahman-haris-785983118/">
                     <Image width="30" height="30" src="/images/logo/linkedin.svg" alt="Switch" />
                 </a>
             </div>
