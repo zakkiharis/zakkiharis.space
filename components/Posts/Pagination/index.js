@@ -39,7 +39,7 @@ export default function Pagination({ data, pageLimit, dataLimit }) {
 
     return (
         <div>
-            <div className="bg-blackGray20 grid sm:grid-cols-3 gap-4">
+            <div className="bg-blackGray20 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {getPaginatedData().map((d, index) => (
                     <Post key={index} data={d} />
                 ))}
