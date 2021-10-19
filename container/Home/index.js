@@ -85,12 +85,6 @@ export default function HomePage({ data }) {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 mx-4">
                         <CardProject />
-                        <CardProject />
-                        <CardProject />
-                        <CardProject />
-                        <CardProject />
-                        <CardProject />
-                        <CardProject />
                     </div>
                 </div>
                 <section id="blog" />
