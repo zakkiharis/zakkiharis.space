@@ -31,13 +31,13 @@ export default function postBlog({
                         <Image height="480" width="1350" className="object-cover" src={cover_image} alt="" />
                     </div>
                 </div>
-                <div className="flex flex-row w-full mx-auto mt-10">
-                    <div className="w-8/12 flex justify-end">
+                <div className="container flex flex-row mx-auto mt-10">
+                    <div className="lg:w-8/12 lg:ml-7 flex justify-end">
                         <article className="article prose prose-lg">
                             <Markdown content={content} />
                         </article>
                     </div>
-                    <div className="flex justify-end text-left mr-5 w-4/12 h-4/5">
+                    <div className="lg:flex hidden lg:justify-end text-left lg:w-4/12 xl:mr-5 h-4/5">
                         <Toc />
                     </div>
                 </div>
