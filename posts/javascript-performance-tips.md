@@ -25,6 +25,26 @@ simulatque [incipit crudelesque
 pavens](http://www.corpora.com/terrae-oscula.html) spatiosa conlegit oscula
 equam.
 
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World Makan Tahu Bulat!")
+puts markdown.to_html
+```
+
+```csharp
+private void index(){
+  MessageBox.Show("hello world");
+}
+```
+
+```jsx
+import React from "react";
+
+const CoolComponent = () => <div>I'm a cool component!!</div>;
+
+export default CoolComponent;
+```
+
 ## Mensis idem
 
 Caelestia Ganymedes gentis. Veni inpellit publica tecta bellaque mortali loca
