@@ -15,11 +15,11 @@ export default function postBlog({
     return (
         <Layout>
             <div className="m-4 sm:m-0 sm:pt-6">
-                <div className="text-white sm:text-greenLantern sm:text-left">
+                <div className="text-white sm:text-left">
                     <div className="font-bold text-center text-4xl mb-4 pb-2 rounded-md">
                         <span className="leading-normal px-4">{title}</span>
                     </div>
-                    <div className="grid justify-items-center grid-cols-2 ">
+                    <div className="grid justify-items-center grid-rows-1 sm:grid-cols-2 mb-4">
                         <div className="sm:text-right sm:pr-3 mb-5">
                             <span className="p-2">Post on {date}</span>
                         </div>
