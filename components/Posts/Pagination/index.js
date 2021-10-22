@@ -39,12 +39,12 @@ export default function Pagination({ data, pageLimit, dataLimit }) {
 
     return (
         <div>
-            <div className="bg-blackGray20 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="bg-backgroundBlack grid justify-items-center grid-cols-1 md:grid-cols-2 gap-10">
                 {getPaginatedData().map((d, index) => (
                     <Post key={index} data={d} />
                 ))}
             </div>
-            <div className="flex flex-row justify-center bg-blackGray20 pb-4">
+            <div className="flex flex-row justify-center mt-4 p-4">
                 <div className="m-4 bg-greenLantern rounded-l-md">
                     <button
                         onClick={goToPreviousPage}

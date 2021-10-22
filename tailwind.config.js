@@ -1,4 +1,3 @@
-const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: [
@@ -8,11 +7,9 @@ module.exports = {
     './container/**/*.js',
     './hoc/**/*.js',
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
-    extend: {},
     colors: {
-      indigo: colors.indigo,
       kuning: '#f74f11',
       blue: '#123c80',
       white: '#ffffff',
@@ -20,6 +17,7 @@ module.exports = {
       green: '#39cc1f',
       red: '#b52b2b',
       black: '#000000',
+      backgroundBlack: '#111111',
       blackGray40: '#404040',
       blackGray30: '#303030',
       blackGray20: '#202020',
@@ -40,15 +38,13 @@ module.exports = {
       base: ['16px', '24px'],
       lg: ['20px', '28px'],
       xl: ['24px', '32px'],
+      '2xl': ['1.5rem', '2rem'],
       '3xl': '30px',
       '4xl': ['36px', '40px'],
+      '5xl': ['54px', '60px'],
       '404': ['100px', '100px'],
       'sm404': ['150px', '150px'],
       'lg404': ['230px', '230px'],
-      texttron: ['42px', '64px'],
-      smtexttron: ['28px', '36px'],
-      mdtexttron: ['30px', '45px'],
-      lgtexttron: ['36px', '50px'],
 
     },
     letterSpacing: {
@@ -56,9 +52,8 @@ module.exports = {
       widest: '.1em',
     },
     fontFamily: {
-      'rubik': 'Rubik, sans-serif',
-      'poppins': 'Poppins, sans-serif'
-    }
+      'ibmsans': 'IBM Plex Sans, sans-serif',
+    },
   },
   variants: {
     extend: {

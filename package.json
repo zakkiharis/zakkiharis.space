@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
+    "github-markdown-css": "^5.0.0",
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
     "marked": "^3.0.4",
@@ -25,5 +26,10 @@
     "eslint-config-next": "11.1.2",
     "postcss": "^8.3.7",
     "tailwindcss": "^2.2.15"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "styled-components"
+    }
   }
 }

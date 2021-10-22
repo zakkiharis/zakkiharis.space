@@ -2,52 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-.cardpost p {
-  font-family: "Poppins", sans-serif;
-  @apply text-base;
-}
-
-/* 
-Tooltip 
+/* Scroll smooth
 ----------------------------------------------------------------------------- */
-.tooltip {
-  @apply relative hidden md:inline-block;
-}
-
-.tooltip .tooltiptext {
-  @apply invisible w-28 bg-greenLantern text-blackGray30 text-center rounded-md py-1 absolute z-10 top-full left-1/2 mt-3 -ml-16;
-}
-
-.tooltip:hover .tooltiptext {
-  @apply visible;
-}
-
-html {
+Html {
   scroll-behavior: smooth;
 }
 
-/* Typing Effect
+/* Border color
 ----------------------------------------------------------------------------- */
-/* .typing {
-  width: 12ch;
-  animation: typing 3s steps(12), blink 0.5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-size: 2em;
-  animation-iteration-count: infinite;
+.border-color {
+  --angle: 0deg;
+  border: 0.5vmin solid;
+  border-radius: 25px;
+  border-image: conic-gradient(
+      from var(--angle),
+      red,
+      yellow,
+      lime,
+      aqua,
+      blue,
+      magenta,
+      red
+    )
+    1;
+
+  animation: 3s rotate linear infinite;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
+@keyframes rotate {
+  to {
+    --angle: 360deg;
   }
 }
 
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-} */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}

@@ -3,7 +3,7 @@ import matter from 'gray-matter'
 import fs from 'fs'
 import Layout from '../../hoc/Layout'
 import Markdown from '../../components/Markdown'
-import Toc from '../../components/Toc'
+// import Toc from '../../components/Toc'
 import Image from 'next/image'
 
 export default function postBlog({
@@ -11,38 +11,36 @@ export default function postBlog({
     content
 }) {
     let tag = tags ? tags.toString() : null
-    let tagPost = tag ? <div className="sm:text-left sm:pr-3"><span className="bg-black bg-opacity-75 rounded-md p-2"> Tags : {tag}</span> </div> : <div></div>
+    let tagPost = tag ? <div className="sm:text-left sm:pr-3"><span className="p-2"> Tags : {tag}</span> </div> : <div></div>
     return (
-        <div className="pt-16">
-            <Layout>
-                <div className="relative text-white sm:text-left">
-                    <div className="absolute z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5">
-                        <div className="font-bold text-center text-4xl mb-4 pb-2 bg-black bg-opacity-75 rounded-md">
-                            <span className="leading-normal px-4">{title}</span>
+        <Layout>
+            <div className="m-4 sm:m-0 sm:pt-6">
+                <div className="text-white sm:text-greenLantern sm:text-left">
+                    <div className="font-bold text-center text-4xl mb-4 pb-2 rounded-md">
+                        <span className="leading-normal px-4">{title}</span>
+                    </div>
+                    <div className="grid justify-items-center grid-cols-2 ">
+                        <div className="sm:text-right sm:pr-3 mb-5">
+                            <span className="p-2">Post on {date}</span>
                         </div>
-                        <div className="grid sm:grid-cols-2 ">
-                            <div className="sm:text-right sm:pr-3 mb-5">
-                                <span className="bg-black bg-opacity-75 rounded-md p-2">Post on {date}</span>
-                            </div>
-                            {tagPost}
-                        </div>
+                        {tagPost}
                     </div>
                     <div className="filter brightness-75">
-                        <Image height="480" width="1350" className="object-cover" src={cover_image} alt="" />
+                        <Image height="800" width="1350" className="object-cover" src={cover_image} alt="" />
                     </div>
                 </div>
-                <div className="container flex flex-row mx-auto mt-10">
-                    <div className="lg:w-8/12 lg:ml-7 flex justify-end">
-                        <article className="article prose prose-lg">
+                <div className="mt-10">
+                    <div className="w-full flex justify-center">
+                        <article className="prose prose-indigo prose-sm sm:prose lg:prose-lg xl:prose-xl">
                             <Markdown content={content} />
                         </article>
                     </div>
-                    <div className="lg:flex hidden lg:justify-end text-left lg:w-4/12 xl:mr-5 h-4/5">
-                        <Toc />
-                    </div>
+                    {/* <div className="lg:flex hidden text-left lg:w-4/12 xl:mr-5 h-4/5">
+                    <Toc />
+                </div> */}
                 </div>
-            </Layout>
-        </div>
+            </div>
+        </Layout>
     )
 
 }

@@ -6,11 +6,12 @@ import Head from 'next/head'
 import HomePage from '../container/Home'
 
 export default function Home({ posts }) {
-  const limitPost = posts.slice(0, 4)
+  const limitPost = posts.slice(0, 3)
   return (
     <>
       <Head>
         <title>Zakki Haris</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div>
         <HomePage data={limitPost} />

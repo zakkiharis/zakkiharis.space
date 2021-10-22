@@ -1,7 +1,7 @@
 import Image from 'next/image'
 export default function Footer() {
     return (
-        <footer className='bg-blackGray30 w-full text-center py-7  border-t-4 border-greenLantern font-rubik tracking-header'>
+        <footer className='w-full text-center py-10 font-ibmsans tracking-header'>
             <div className="text-greenLantern font-bold">
                 Lets Connect
             </div>

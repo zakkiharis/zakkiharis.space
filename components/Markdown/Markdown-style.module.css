@@ -1,18 +1,18 @@
 .Markdown {
-  font-family: "Poppins", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: white;
 }
 
-/* List 
------------------------------------------------------------------------------ */
-.Markdown ul,
-.Markdown ol {
-  @apply pl-10;
+.Markdown h1,
+.Markdown h2,
+.Markdown h3,
+.Markdown h4,
+.Markdown h5,
+.Markdown strong,
+.Markdown p,
+.Markdown code {
+  color: white;
 }
-
-.Markdown ul {
-  @apply list-disc;
-}
-
-.Markdown ol {
-  @apply list-decimal;
+.Markdown a {
+  color: #08ff04;
 }

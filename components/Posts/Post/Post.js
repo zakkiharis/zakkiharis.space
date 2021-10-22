@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 export default function Post({ data }) {
     return (
-        <div className="p-10">
-            <div className="cardpost  bg-blackGray40 hover:shadow-lg hover:border-transparent max-w-sm rounded">
+        <div className="">
+            <div className="font-ibmsans  bg-blackGray20 hover:shadow-lg hover:border-transparent max-w-sm rounded">
                 <Image className="object-cover" height="250" width="400" src={data.frontmatter.cover_image} alt="Image article" />
                 <Link href={`/blog/${data.slug}`} passHref>
                     <div className="px-6 py-4 cursor-pointer group">
