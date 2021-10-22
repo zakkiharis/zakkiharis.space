@@ -1,9 +1,12 @@
 
 module.exports = {
   purge: [
+    './pages/*.js',
     './pages/**/*.js',
     './components/**/*.js',
+    './components/**/**/*.js',
     './components/Markdown/Markdown-style.module.css',
+    './container/*.js',
     './container/**/*.js',
     './hoc/**/*.js',
   ],
