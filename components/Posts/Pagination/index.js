@@ -3,6 +3,7 @@ import { addRound } from '../../../lib/utils'
 import Post from "../Post/Post"
 
 export default function Pagination({ data, pageLimit, dataLimit }) {
+
     let mathRound = Math.round(data.length / dataLimit)
     if (data.length > 6 && data.length % 6 > 0) {
         mathRound = addRound(mathRound)
@@ -39,7 +40,15 @@ export default function Pagination({ data, pageLimit, dataLimit }) {
 
     return (
         <div>
-            <div className="bg-backgroundBlack grid justify-items-center grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="relative w-full mb-4 px-4 md:px-0 dark:text-greenLantern">
+                <input
+                    aria-label="Search articles"
+                    type="text"
+                    placeholder="Search articles"
+                    className="block w-full px-4 py-2 text-gray-900 rounded-md dark:bg-blackGray20 border-2 border-greenLantern"
+                />
+            </div>
+            <div className="grid justify-items-center grid-cols-1 md:grid-cols-2 gap-10 px-4 md:px-0">
                 {getPaginatedData().map((d, index) => (
                     <Post key={index} data={d} />
                 ))}
@@ -57,9 +66,9 @@ export default function Pagination({ data, pageLimit, dataLimit }) {
                         <button
                             key={index}
                             onClick={changePage}
-                            className={`px-8 py-2 ${currentPage === item ? 'active:bg-kuning' : null}`}
+                            className={`px-6 sm:px-8 py-2 ${currentPage === item ? 'active:bg-kuning' : null}`}
                         >
-                            <span className="text-greenLantern font-bold">{item}</span>
+                            <span className="dark:text-greenLantern text-white font-bold">{item}</span>
                         </button>
                     ))}
                 </div>

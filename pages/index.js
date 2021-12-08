@@ -3,7 +3,7 @@ import matter from 'gray-matter'
 import fs from 'fs'
 
 import Head from 'next/head'
-import HomePage from '../container/Home'
+import HomePage from '@container/Home'
 
 export default function Home({ posts }) {
   const limitPost = posts.slice(0, 3)
@@ -11,6 +11,9 @@ export default function Home({ posts }) {
     <>
       <Head>
         <title>Zakki Haris</title>
+        <link rel="canonical" href="http://zakkiharis.space/" />
+
+        <meta name="description" content="Personal blog Zakki Haris" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div>

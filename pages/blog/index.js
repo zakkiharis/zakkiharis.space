@@ -1,16 +1,16 @@
-import Layout from '../../hoc/Layout'
+import Layout from '@hoc/Layout'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import Posts from "../../components/Posts"
+import Posts from "@components/Posts"
 
 export default function Blog({ posts }) {
     return (
-        <div>
+        <>
             <Layout>
                 <Posts posts={posts} />
             </Layout>
-        </div>
+        </>
     )
 }
 

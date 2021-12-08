@@ -1,6 +1,6 @@
 .Markdown {
   font-family: "IBM Plex Sans", sans-serif;
-  color: white;
+  color: black;
 }
 
 .Markdown h1,
@@ -11,8 +11,30 @@
 .Markdown strong,
 .Markdown p,
 .Markdown code {
+  color: black;
+}
+
+.Markdown a {
+  color: #08ff04;
+}
+
+/* DARK */
+.MarkdownDark {
+  font-family: "IBM Plex Sans", sans-serif;
   color: white;
 }
-.Markdown a {
+
+.MarkdownDark h1,
+.MarkdownDark h2,
+.MarkdownDark h3,
+.MarkdownDark h4,
+.MarkdownDark h5,
+.MarkdownDark strong,
+.MarkdownDark p,
+.MarkdownDark code {
+  color: white;
+}
+
+.MarkdownDark a {
   color: #08ff04;
 }

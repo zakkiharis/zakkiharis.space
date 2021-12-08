@@ -8,6 +8,14 @@ Html {
   scroll-behavior: smooth;
 }
 
+/* Image center in blogger html parser */
+.article img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+  max-width: 100%;
+}
 /* Border color
 ----------------------------------------------------------------------------- */
 .border-color {

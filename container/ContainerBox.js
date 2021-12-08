@@ -1,3 +1,9 @@
 export default function Container({ children }) {
-    return <div className="container max-w-2xl mx-auto">{children}</div>
+
+    return (
+        <div>
+            <div className="container  mx-auto max-w-2xl">{children}</div>
+        </div>
+    )
 }
+

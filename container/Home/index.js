@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Layout from '../../hoc/Layout'
-import CardBlog from '../../components/Card/CardBlog'
-import CardProject from '../../components/Card/CardProject'
+import Layout from '@hoc/Layout'
+import CardBlog from '@components/Card/CardBlog'
+import CardProject from '@components/Card/CardProject'
 
 export default function HomePage({ data }) {
     return (
         <Layout>
-            <div className="relative text-white pt-16">
-                <div className="flex px-8 sm:px-4 md:px-0 sm:flex-row flex-col-reverse">
+            <div className="relative pt-16">
+                <div className="flex px-8 sm:px-4  md:px-0 sm:flex-row flex-col-reverse">
                     <div className="flex-auto">
                         <div className="pr-12 font-ibmsans">
                             <div className="font-black text-5xl">Zakki Haris.</div>
@@ -36,38 +36,38 @@ export default function HomePage({ data }) {
                         </div>
                         <div className="flex-1 px-8 sm:px-4 md:px-0 py-4">
                             <div className="mb-4">Technologies that I use:</div>
-                            <div className="grid grid-rows-3 lg:grid-rows-2 grid-flow-col gap-4">
+                            <div className="grid grid-rows-4 sm:grid-rows-3 lg:grid-rows-2 grid-flow-col gap-4">
                                 <div className="flex">
-                                    <Image alt="React" src="/images/technologies/react.svg" width="24" height="24" />
-                                    <div className="pl-2">React Js</div>
+                                    <Image alt="React" src="/images/technologies/javascript.svg" width="24" height="24" />
+                                    <div className="pl-2">Javascript</div>
                                 </div>
                                 <div className="flex">
                                     <Image alt="React" src="/images/technologies/react.svg" width="24" height="24" />
                                     <div className="pl-2">React Js</div>
                                 </div>
                                 <div className="flex">
-                                    <Image alt="React" src="/images/technologies/react.svg" width="24" height="24" />
-                                    <div className="pl-2">React Js</div>
+                                    <Image alt="React" src="/images/technologies/flutter.svg" width="24" height="24" />
+                                    <div className="pl-2">Flutter</div>
                                 </div>
                                 <div className="flex">
-                                    <Image alt="React" src="/images/technologies/react.svg" width="24" height="24" />
-                                    <div className="pl-2">React Js</div>
+                                    <Image alt="React" src="/images/technologies/nextjs.svg" width="24" height="24" />
+                                    <div className="pl-2">Next Js</div>
                                 </div>
                                 <div className="flex">
-                                    <Image alt="React" src="/images/technologies/react.svg" width="24" height="24" />
-                                    <div className="pl-2">React Js</div>
+                                    <Image alt="React" src="/images/technologies/css.svg" width="24" height="24" />
+                                    <div className="pl-2">CSS 3</div>
                                 </div>
                                 <div className="flex">
-                                    <Image alt="React" src="/images/technologies/react.svg" width="24" height="24" />
-                                    <div className="pl-2">React Js</div>
+                                    <Image alt="React" src="/images/technologies/html.svg" width="24" height="24" />
+                                    <div className="pl-2">HTML</div>
                                 </div>
                                 <div className="flex">
-                                    <Image alt="React" src="/images/technologies/react.svg" width="24" height="24" />
-                                    <div className="pl-2">React Js</div>
+                                    <Image alt="React" src="/images/technologies/tailwindcss.svg" width="24" height="24" />
+                                    <div className="pl-2">Tailwind CSS</div>
                                 </div>
                                 <div className="flex">
-                                    <Image alt="React" src="/images/technologies/react.svg" width="24" height="24" />
-                                    <div className="pl-2">React Js</div>
+                                    <Image alt="React" src="/images/technologies/dart.svg" width="24" height="24" />
+                                    <div className="pl-2">Dart</div>
                                 </div>
                             </div>
                         </div>
@@ -101,7 +101,7 @@ export default function HomePage({ data }) {
                     </div>
                     <div className="text-center">
                         <Link href="/blog">
-                            <button className="py-2 px-3 rounded-md mt-8 mb-5 border items-center border-greenOld text-greenLantern hover:bg-greenOld hover:text-white">
+                            <button className="py-2 px-3 rounded-md mt-8 mb-5 border items-center border-greenLantern text-greenLantern hover:bg-greenLantern hover:text-white">
                                 See More
                             </button>
                         </Link>

@@ -1,13 +1,15 @@
 import path from 'path'
 import matter from 'gray-matter'
 import fs from 'fs'
-import Layout from '../../hoc/Layout'
-import Markdown from '../../components/Markdown'
+import Layout from '@hoc/Layout'
+import Markdown from '@components/Markdown'
+import ViewCounter from "@components/ViewCounter"
 // import Toc from '../../components/Toc'
 import Image from 'next/image'
 
 export default function postBlog({
     frontmatter: { title, date, cover_image, tags },
+    slug,
     content
 }) {
     let tag = tags ? tags.toString() : null
@@ -15,15 +17,16 @@ export default function postBlog({
     return (
         <Layout>
             <div className="m-4 sm:m-0 sm:pt-6">
-                <div className="text-white sm:text-left">
+                <div className="dark:text-white select-none sm:text-left">
                     <div className="font-bold text-center text-4xl mb-4 pb-2 rounded-md">
                         <span className="leading-normal px-4">{title}</span>
                     </div>
-                    <div className="grid justify-items-center grid-rows-1 sm:grid-cols-2 mb-4">
+                    <div className="grid justify-items-center grid-rows-1 sm:grid-cols-3 mb-4">
                         <div className="sm:text-right sm:pr-3 mb-5">
                             <span className="p-2">Post on {date}</span>
                         </div>
                         {tagPost}
+                        <ViewCounter slug={slug} />
                     </div>
                     <div className="filter brightness-75">
                         <Image height="800" width="1350" className="object-cover" src={cover_image} alt="" />
@@ -31,7 +34,10 @@ export default function postBlog({
                 </div>
                 <div className="mt-10">
                     <div className="w-full flex justify-center">
-                        <article className="prose prose-indigo prose-sm sm:prose lg:prose-lg xl:prose-xl">
+                        {/* <article className="prose prose-indigo prose-sm sm:prose lg:prose-lg xl:prose-xl">
+                            <Markdown content={content} />
+                        </article> */}
+                        <article className="w-full mt-4 prose dark:prose-dark max-w-none">
                             <Markdown content={content} />
                         </article>
                     </div>

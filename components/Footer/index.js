@@ -1,11 +1,11 @@
 import Image from 'next/image'
 export default function Footer() {
     return (
-        <footer className='w-full text-center py-10 font-ibmsans tracking-header'>
+        <footer className='w-full text-center py-10 font-ibmsans tracking-header select-none'>
             <div className="text-greenLantern font-bold">
                 Lets Connect
             </div>
-            <div className="text-white text-sm sm:text-base">
+            <div className="dark:text-white text-sm font-medium sm:text-base">
                 Feel free to reach out for collaborations or just a friendly
             </div>
             <div className="flex pt-3 justify-between w-60 m-auto">
