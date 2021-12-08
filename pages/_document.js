@@ -5,7 +5,7 @@ export default class MyDocument extends Document {
         return (
             <Html lang="id">
                 <Head>
-                    <meta name="description" content="Portfolio" />
+                    <meta name="description" content="Perdonal blog for fun" />
                     <link rel="icon" href="/images/favicon.png" />
 
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
