@@ -21,7 +21,6 @@ Html {
 .border-color {
   --angle: 0deg;
   border: 0.5vmin solid;
-  border-radius: 25px;
   border-image: conic-gradient(
       from var(--angle),
       red,

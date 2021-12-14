@@ -149,11 +149,11 @@ export default function Header() {
                         </div>
                     </Link> */}
                 </div>
-                <div className="dark:bg-blackGray40 bg-greenLantern rounded-md mr-4 sm:mr-0 py-2 select-none">
+                <div className="dark:bg-blackGray20 dark:hover:bg-blackGray40 bg-greenLantern hover:bg-green rounded-md mr-4 sm:mr-0 select-none">
                     <button
                         aria-label="Toggle Dark Mode"
                         type="button"
-                        className="bg-gray-200 hover:bg-gray-300 dark:bg-gray-800  dark:hover:bg-gray-700 transition-all rounded flex items-center justify-center h-11 w-11 select-none"
+                        className="flex items-center justify-center h-11 w-11 py-2 select-none"
                         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                     >
                         {mounted && (

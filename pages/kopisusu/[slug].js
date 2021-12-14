@@ -1,17 +1,32 @@
 import Markdown from '@components/Markdown'
 import Layout from '@hoc/Layout'
+import CardAlert from '@components/Card/CardAlert'
 
 
 export default function Kopisusu({ data }) {
 
+    let markdown;
+
+    console.log(data.error);
+
+    if (data.error) {
+        markdown = (
+            <CardAlert error={data.error.code} />
+        )
+    } else {
+        markdown = (
+            <div className="px-4 md:px-0 mt-10">
+                <article className="article w-full mt-4 prose dark:prose-dark max-w-none">
+                    <Markdown content={data.content} />
+                </article>
+            </div>
+        )
+    }
+
     return (
         <>
             <Layout>
-                <div className="px-4 md:px-0 mt-10">
-                    <article className="article w-full mt-4 prose dark:prose-dark max-w-none">
-                        <Markdown content={data.content} />
-                    </article>
-                </div>
+                {markdown}
             </Layout>
         </>
     )
