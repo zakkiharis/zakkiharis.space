@@ -1,7 +1,9 @@
 import Markdown from '@components/Markdown'
 import Layout from '@hoc/Layout'
 
+
 export default function Kopisusu({ data }) {
+
     return (
         <>
             <Layout>
@@ -29,23 +31,10 @@ async function fetchAPI(slug) {
     return json
 }
 
-export async function getStaticPaths() {
-    const res = await fetch(process.env.BLOGGER_API_URL + "?key=" + process.env.BLOGGER_KEY)
-    const json = await res.json()
+export async function getServerSideProps(context) {
 
-    const paths = json.items.map((p) => ({
-        params: {
-            slug: p.id
-        }
-    }))
+    const { slug } = context.query;
 
-    return {
-        paths,
-        fallback: false
-    }
-}
-
-export async function getStaticProps({ params: { slug } }) {
     const data = await fetchAPI(slug)
 
     if (!data) {
