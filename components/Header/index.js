@@ -3,18 +3,27 @@ import Head from 'next/head'
 import styled from 'styled-components'
 import { useEffect, useRef, useState } from 'react'
 import { useTheme } from 'next-themes'
+import { useRouter } from 'next/router'
 
 
-const Navbar = ({ href, text }) => (
-    <div className="group mr-10">
-        <div className="p-2  group-hover:bg-blackGray20 rounded-lg cursor-pointer">
-            <Link href={href}>
-                <a className="dark:text-white group-hover:text-greenLantern ">{text}</a>
-            </Link>
+
+
+const Navbar = ({ href, text }) => {
+
+    const router = useRouter();
+
+    return (
+        <div className="group mr-10">
+            <div className="p-2  group-hover:bg-blackGray20 rounded-lg cursor-pointer">
+                <Link href={href}>
+                    <a className={href !== router.asPath ?
+                        `dark:text-white group-hover:text-greenLantern` :
+                        `dark:text-greenLantern group-hover:text-greenLantern`}>{text}</a>
+                </Link>
+            </div>
         </div>
-    </div>
-)
-
+    )
+}
 const StyledMenu = styled.nav`
     display: flex;
     flex-direction: column;
@@ -143,11 +152,6 @@ export default function Header() {
                     <Navbar href="/#about" text="About" />
                     <Navbar href="/blog" text="Blog" />
                     <Navbar href="/kopisusu" text="KopiSusu" />
-                    {/* <Link href="/resume" passHref>
-                        <div className="hidden sm:block p-2 rounded-md border border-greenOld text-greenLantern hover:text-white hover:bg-greenOld ml-5 cursor-pointer">
-                            <a>Resume</a>
-                        </div>
-                    </Link> */}
                 </div>
                 <div className="dark:bg-blackGray20 dark:hover:bg-blackGray40 bg-greenLantern hover:bg-green rounded-md mr-4 sm:mr-0 select-none">
                     <button
