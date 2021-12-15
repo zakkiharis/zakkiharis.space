@@ -5,9 +5,7 @@ import CardAlert from '@components/Card/CardAlert'
 
 export default function Kopisusu({ data }) {
 
-    let markdown;
-
-    console.log(data.error);
+    let markdown
 
     if (data.error) {
         markdown = (
@@ -38,9 +36,7 @@ async function fetchAPI(slug) {
     const res = await fetch(process.env.BLOGGER_API_URL + "/" + slug + "?key=" + process.env.BLOGGER_KEY)
     const json = await res.json()
 
-
     if (json.errors) {
-        // console.log(json.errors)
         throw new Error('Faild to fetch API')
     }
     return json
@@ -48,8 +44,7 @@ async function fetchAPI(slug) {
 
 export async function getServerSideProps(context) {
 
-    const { slug } = context.query;
-
+    const { slug } = context.query
     const data = await fetchAPI(slug)
 
     if (!data) {
