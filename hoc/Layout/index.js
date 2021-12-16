@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 
 export default function Layout({ children, ...data }) {
     const meta = {
-        title: 'Zakki Haris',
+        title: 'Developer',
         description: 'Front-end Developer - React JS or Flutter',
         type: 'website',
         ...data
