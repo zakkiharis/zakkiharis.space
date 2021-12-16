@@ -15,8 +15,6 @@ export default class MyDocument extends Document {
             <Html lang="id">
                 <Head>
                     {this.props.styleTags}
-
-                    <meta name="description" content="Perdonal blog for fun" />
                     <link rel="icon" href="/images/favicon.png" />
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />

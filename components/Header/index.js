@@ -138,10 +138,6 @@ export default function Header() {
 
     return (
         <header className="pt-5">
-            <Head>
-                <title>Zakki Haris</title>
-                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-            </Head>
             <div className="tracking-header font-ibmsans flex items-center">
                 <div className="sm:hidden flex-grow max-h-14 z-10" ref={node}>
                     <Burger open={open} setOpen={setOpen} />
