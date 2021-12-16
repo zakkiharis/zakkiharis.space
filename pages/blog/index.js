@@ -3,8 +3,11 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Posts from "@components/Posts"
+import { sortByDate } from '@lib/utils'
 
 export default function Blog({ posts }) {
+
+
     return (
         <>
             <Layout>
@@ -33,7 +36,7 @@ export async function getStaticProps() {
 
     return {
         props: {
-            posts: posts
+            posts: posts.sort(sortByDate)
         }
     }
 }
