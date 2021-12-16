@@ -8,14 +8,21 @@ import ViewCounter from "@components/ViewCounter"
 import Image from 'next/image'
 
 export default function postBlog({
-    frontmatter: { title, date, cover_image, tags },
+    frontmatter: { title, date, cover_image, tags, excerpt },
     slug,
     content
 }) {
     let tag = tags ? tags.toString() : null
     let tagPost = tag ? <div className="sm:text-left sm:pr-3"><span className="p-2"> Tags : {tag}</span> </div> : <div></div>
+
     return (
-        <Layout>
+        < Layout
+            title={title}
+            date={date}
+            image={cover_image}
+            description={excerpt}
+            type="article"
+        >
             <div className="m-4 sm:m-0 sm:pt-6">
                 <div className="dark:text-white select-none sm:text-left">
                     <div className="font-bold text-center text-4xl mb-4 pb-2 rounded-md">
@@ -46,7 +53,7 @@ export default function postBlog({
                 </div> */}
                 </div>
             </div>
-        </Layout>
+        </Layout >
     )
 
 }

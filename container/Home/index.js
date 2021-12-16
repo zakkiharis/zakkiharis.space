@@ -12,7 +12,7 @@ export default function HomePage({ data }) {
                     <div className="flex-auto">
                         <div className="pr-12 font-ibmsans">
                             <div className="font-black text-5xl">Zakki Haris.</div>
-                            <div className="font-semibold text-greenLantern mb-2">Fullstack Developer</div>
+                            <div className="font-semibold text-greenLantern mb-2">Front-end Developer</div>
                             <div>I enjoy creating user-centric, delightful, and human experiences. </div>
                         </div>
                     </div>
