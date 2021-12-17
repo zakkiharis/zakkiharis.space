@@ -12,7 +12,6 @@ export default function Posts({ posts }) {
                 <>
                     <Pagination
                         data={posts}
-                        pageLimit={2}
                         dataLimit={6}
                     />
                 </>
