@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
+    "cross-env": "^7.0.3",
     "firebase-admin": "^10.0.0",
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",

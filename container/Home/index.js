@@ -100,14 +100,14 @@ export default function HomePage({ data }) {
                         ))}
                     </div>
                     <div className="text-center">
-                        <Link href="/blog">
+                        <Link href="/blog" passHref>
                             <button className="py-2 px-3 rounded-md mt-8 mb-5 border items-center border-greenLantern text-greenLantern hover:bg-greenLantern hover:text-white">
                                 See More
                             </button>
                         </Link>
                     </div>
                 </div>
-                <Link href="/" scroll={true}>
+                <Link href="/" scroll={true} passHref>
                     <div className="absolute right-10 md:right-0 -bottom-6 p-3 justify-items-center border border-greenLantern hover:bg-blackGray20 rounded-full cursor-pointer shadow-lg">
                         <Image height={14} width={23} src="/images/arrow.png" alt="arrow" />
                     </div>
